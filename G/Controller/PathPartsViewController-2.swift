@@ -59,6 +59,10 @@ class PathPartsViewControllerTwo: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func backToMenuButtonPressed(_ sender: CustomButton) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension PathPartsViewControllerTwo: PathPartsUIViewTwoDelegate {

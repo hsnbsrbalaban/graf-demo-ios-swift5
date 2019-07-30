@@ -40,6 +40,11 @@ class CustomScrollView: UIScrollView {
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         
+        let superviewPoint = convert(point, to: superview)
+        if !frame.contains(superviewPoint) {
+            return nil
+        }
+        
         if let view = uiControlSubview(at: point), view is UIControl {
             return view
         }
