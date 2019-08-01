@@ -24,31 +24,34 @@ class PathPartsUIViewTwo: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.cornerRadius  = 15
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.layer.cornerRadius  = 15
     }
     
     func appendPoints() {
-        let bound = self.bounds
+        let width = bounds.width
+        let height = bounds.height
         
         switch viewType {
         case .lineTo:
-            points.append(CGPoint(x: bound.width / 5, y: bound.height / 5 * 4)) // lower left point
-            points.append(CGPoint(x: bound.width / 2, y: bound.height / 5)) // upper middle point
-            points.append(CGPoint(x: bound.width / 5 * 4, y: bound.height / 5 * 4)) // lower right point
+            points.append(CGPoint(x: width * 0.2, y: height * 0.8)) // lower left point
+            points.append(CGPoint(x: width * 0.5, y: height * 0.2)) // upper middle point
+            points.append(CGPoint(x: width * 0.8, y: height * 0.8)) // lower right point
             
         case .quadCurve:
-            points.append(CGPoint(x: bound.width / 5, y: bound.height / 5)) // upper left point
-            points.append(CGPoint(x: bound.width / 2, y: bound.height / 5 * 4)) // lower middle point
-            points.append(CGPoint(x: bound.width / 5 * 4, y: bound.height / 5)) // control point
+            points.append(CGPoint(x: width * 0.2, y: height * 0.2)) // upper left point
+            points.append(CGPoint(x: width * 0.5, y: height * 0.8)) // lower middle point
+            points.append(CGPoint(x: width * 0.8, y: height * 0.2)) // control point
             
         case .bezierCurve:
-            points.append(CGPoint(x: bound.width / 2, y: bound.height / 5)) // upper middle point
-            points.append(CGPoint(x: bound.width / 2, y: bound.height / 5 * 4)) // lower middle point
-            points.append(CGPoint(x: bound.width / 5 * 4, y: bound.height / 2)) // right control point
-            points.append(CGPoint(x: bound.width / 5, y: bound.height / 2)) // left control point
+            points.append(CGPoint(x: width * 0.5, y: height * 0.2)) // upper middle point
+            points.append(CGPoint(x: width * 0.5, y: height * 0.8)) // lower middle point
+            points.append(CGPoint(x: width * 0.8, y: height * 0.5)) // right control point
+            points.append(CGPoint(x: width * 0.2, y: height * 0.5)) // left control point
             
         default:
             fatalError("type is empty!")

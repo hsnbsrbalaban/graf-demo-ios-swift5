@@ -19,6 +19,8 @@ class PathPartsViewControllerTwo: UIViewController {
     @IBOutlet weak var bezierCurveControlCorner0: UIImageView!
     @IBOutlet weak var bezierCurveControlCorner1: UIImageView!
     
+    @IBOutlet weak var superView: UIView!
+    
     var clickedRect: ViewTypeTwo = .empty
 
     override func viewDidLoad() {
@@ -67,7 +69,7 @@ class PathPartsViewControllerTwo: UIViewController {
 
 extension PathPartsViewControllerTwo: PathPartsUIViewTwoDelegate {
     func cornerNum(_ touch: UITouch) -> Int {
-        let superLocation = touch.location(in: self.view)
+        let superLocation = touch.location(in: superView)
         
         if lineToCheckView.frame.contains(superLocation) {
             let location = touch.location(in: lineToView)

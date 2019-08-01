@@ -23,6 +23,8 @@ class PathPartsViewControllerOne: UIViewController {
     @IBOutlet weak var roundedRectEmptyCorner0: UIImageView!
     @IBOutlet weak var roundedRectEmptyCorner1: UIImageView!
     
+    @IBOutlet weak var superView: UIView!
+    
     var clickedRect: ViewTypeOne = .empty
     
     override func viewDidLoad() {
@@ -72,7 +74,7 @@ class PathPartsViewControllerOne: UIViewController {
 extension PathPartsViewControllerOne: PathPartsUIViewOneDelegate {
     
     func cornerNum(_ touch: UITouch) -> Int {
-        let superLocation = touch.location(in: self.view)
+        let superLocation = touch.location(in: superView)
         
         if rectCheckView.frame.contains(superLocation){
             let location = touch.location(in: rectView)

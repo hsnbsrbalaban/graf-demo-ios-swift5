@@ -41,11 +41,14 @@ class LineUIView: UIView {
     }
     
     func customInit() {
-        let bound = self.bounds
-        points.append(CGPoint(x: 30, y: bound.height / 6 * 5))
-        points.append(CGPoint(x: bound.width / 2 + 15, y: 15))
-        points.append(CGPoint(x: bound.width / 5 * 4 + 15, y: bound.height / 5 * 3))
-        points.append(CGPoint(x: bound.width / 3 * 1 + 15, y: bound.height / 5 * 4))
+        self.layer.cornerRadius  = 15
+        
+        let width = bounds.width
+        let height = bounds.height
+        points.append(CGPoint(x: width * 0.2, y: height * 0.75))
+        points.append(CGPoint(x: width * 0.5, y: height * 0.125))
+        points.append(CGPoint(x: width * 0.8, y: height * 0.5))
+        points.append(CGPoint(x: width * 0.4, y: height * 0.625))
     }
     
     override func draw(_ rect: CGRect) {

@@ -136,7 +136,4 @@ extension LineViewController: LineUIViewDelegate {
             print("invalid cornerNum!")
         }
     }
-    
-    
-
 }

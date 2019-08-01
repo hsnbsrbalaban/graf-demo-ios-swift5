@@ -21,6 +21,8 @@
 		8861134D22E9CCD70004BA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8861134C22E9CCD70004BA39 /* Assets.xcassets */; };
 		8861135022E9CCD70004BA39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8861134E22E9CCD70004BA39 /* LaunchScreen.storyboard */; };
 		8861135822E9D21E0004BA39 /* Customs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861135722E9D21E0004BA39 /* Customs.swift */; };
+		88B65F4222F2BE86008C7C74 /* AllPartsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B65F4122F2BE86008C7C74 /* AllPartsUIView.swift */; };
+		88B65F4422F2BEA1008C7C74 /* AllPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B65F4322F2BEA1008C7C74 /* AllPartsViewController.swift */; };
 		88CF946022E9EBB50071DCBB /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF945F22E9EBB50071DCBB /* SimpleViewController.swift */; };
 		88FC4A7622EECBB0008F7B84 /* PathPartsUIViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC4A7522EECBB0008F7B84 /* PathPartsUIViewOne.swift */; };
 		88FC4A7822EECBE2008F7B84 /* PathPartsViewController-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FC4A7722EECBE2008F7B84 /* PathPartsViewController-1.swift */; };
@@ -45,6 +47,8 @@
 		8861134F22E9CCD70004BA39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8861135122E9CCD70004BA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8861135722E9D21E0004BA39 /* Customs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customs.swift; sourceTree = "<group>"; };
+		88B65F4122F2BE86008C7C74 /* AllPartsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPartsUIView.swift; sourceTree = "<group>"; };
+		88B65F4322F2BEA1008C7C74 /* AllPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPartsViewController.swift; sourceTree = "<group>"; };
 		88CF945F22E9EBB50071DCBB /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		88FC4A7522EECBB0008F7B84 /* PathPartsUIViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPartsUIViewOne.swift; sourceTree = "<group>"; };
 		88FC4A7722EECBE2008F7B84 /* PathPartsViewController-1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PathPartsViewController-1.swift"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				883D389422F0388F00A535E1 /* ArcsViewControllerOne.swift */,
 				883D389622F06AE100A535E1 /* ArcViewControllerTwo.swift */,
 				883D389822F06B1000A535E1 /* ArcViewControllerThree.swift */,
+				88B65F4322F2BEA1008C7C74 /* AllPartsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				88FC4A7522EECBB0008F7B84 /* PathPartsUIViewOne.swift */,
 				88FC4A7B22EF3B30008F7B84 /* PathPartsUIViewTwo.swift */,
 				883D389222F0386600A535E1 /* ArcsUIView.swift */,
+				88B65F4122F2BE86008C7C74 /* AllPartsUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,12 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8861134822E9CCD50004BA39 /* ViewController.swift in Sources */,
+				88B65F4422F2BEA1008C7C74 /* AllPartsViewController.swift in Sources */,
 				883D389322F0386600A535E1 /* ArcsUIView.swift in Sources */,
 				88FC4A7622EECBB0008F7B84 /* PathPartsUIViewOne.swift in Sources */,
 				8841E82F22EAE08200E7F1DC /* SimpleUIView.swift in Sources */,
 				883D389922F06B1000A535E1 /* ArcViewControllerThree.swift in Sources */,
 				8841E83322EAF25F00E7F1DC /* LineViewController.swift in Sources */,
 				8861135822E9D21E0004BA39 /* Customs.swift in Sources */,
+				88B65F4222F2BE86008C7C74 /* AllPartsUIView.swift in Sources */,
 				8841E83522EAF2E800E7F1DC /* LineUIView.swift in Sources */,
 				883D389522F0388F00A535E1 /* ArcsViewControllerOne.swift in Sources */,
 				88FC4A7822EECBE2008F7B84 /* PathPartsViewController-1.swift in Sources */,

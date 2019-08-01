@@ -30,33 +30,34 @@ class ArcsUIView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.cornerRadius  = 30
+        self.layer.cornerRadius  = 15
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius  = 30
+        self.layer.cornerRadius  = 15
     }
     
     func appendPoints() {
-        let bound = self.bounds
+        let width = bounds.width
+        let height = bounds.height
         
         if viewType == .arc || viewType == .relativeArc {
-            points.append(CGPoint(x: bound.width * 0.1, y: bound.height * 0.5)) //start point
-            points.append(CGPoint(x: bound.width * 0.375, y: bound.height * 0.5)) //left-middle blue
-            points.append(CGPoint(x: bound.width * 0.5, y: bound.height * 0.5)) //center point - red
-            points.append(CGPoint(x: bound.width * 0.5, y: bound.height * 0.5 + bound.width * 0.125)) //radius point
-            points.append(CGPoint(x: bound.width * 0.625, y: bound.height * 0.5)) //right-middle blue
-            points.append(CGPoint(x: bound.width * 0.9, y: bound.height * 0.5)) //end point
+            points.append(CGPoint(x: width * 0.1, y: height * 0.5)) //start point
+            points.append(CGPoint(x: width * 0.375, y: height * 0.5)) //left-middle blue
+            points.append(CGPoint(x: width * 0.5, y: height * 0.5)) //center point - red
+            points.append(CGPoint(x: width * 0.5, y: height * 0.5 + width * 0.125)) //radius point
+            points.append(CGPoint(x: width * 0.625, y: height * 0.5)) //right-middle blue
+            points.append(CGPoint(x: width * 0.9, y: height * 0.5)) //end point
         }
         else if viewType == .arcToPoint {
-            points.append(CGPoint(x: bound.width * 0.1, y: bound.height * 0.5)) //start point
-            points.append(CGPoint(x: bound.width * 0.375, y: bound.height * 0.5)) //left-middle blue
-            points.append(CGPoint(x: bound.width * 0.375, y: bound.height * 0.1)) //control point 0
-            points.append(CGPoint(x: bound.width * 0.5, y: bound.height * 0.5 + bound.width * 0.125)) //radius point
-            points.append(CGPoint(x: bound.width * 0.625, y: bound.height * 0.5)) //right-middle blue
-            points.append(CGPoint(x: bound.width * 0.9, y: bound.height * 0.7)) //control point 1
-            points.append(CGPoint(x: bound.width * 0.9, y: bound.height * 0.5)) //end point
+            points.append(CGPoint(x: width * 0.1, y: height * 0.5)) //start point
+            points.append(CGPoint(x: width * 0.375, y: height * 0.5)) //left-middle blue
+            points.append(CGPoint(x: width * 0.375, y: height * 0.1)) //control point 0
+            points.append(CGPoint(x: width * 0.5, y: height * 0.5 + width * 0.125)) //radius point
+            points.append(CGPoint(x: width * 0.625, y: height * 0.5)) //right-middle blue
+            points.append(CGPoint(x: width * 0.9, y: height * 0.7)) //control point 1
+            points.append(CGPoint(x: width * 0.9, y: height * 0.5)) //end point
         } else {
             fatalError("type is empty!")
         }

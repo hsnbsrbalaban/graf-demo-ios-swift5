@@ -33,10 +33,13 @@ class PathPartsUIViewOne: UIView {
     }
     
     func customInit() {
-        let bound = self.bounds
+        self.layer.cornerRadius  = 15
         
-        points.append(CGPoint(x: bound.width / 5, y: bound.height / 5))
-        points.append(CGPoint(x: bound.width / 5 * 4, y: bound.height / 5 * 4))
+        let width = bounds.width
+        let height = bounds.height
+        
+        points.append(CGPoint(x: width * 0.2, y: height * 0.2))
+        points.append(CGPoint(x: width * 0.8, y: height * 0.8))
         points.append(CGPoint(x: points[0].x + 20, y: points[0].y + 20))
     }
     
@@ -60,8 +63,8 @@ class PathPartsUIViewOne: UIView {
         let height = points[1].y - points[0].y
         let rect = CGRect(x: points[0].x, y: points[0].y, width: width, height: height)
         
-        controlDistance = min(controlDistance, rect.height / 2)
-        controlDistance = min(controlDistance, rect.width / 2)
+        controlDistance = min(controlDistance, rect.height * 0.5)
+        controlDistance = min(controlDistance, rect.width * 0.5)
         
         return controlDistance
     }
