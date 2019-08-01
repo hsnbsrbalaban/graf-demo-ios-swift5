@@ -87,6 +87,7 @@
 		8841E83122EAF13A00E7F1DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8861134E22E9CCD70004BA39 /* LaunchScreen.storyboard */,
 				8861134922E9CCD50004BA39 /* Main.storyboard */,
 				8841E82E22EAE08200E7F1DC /* SimpleUIView.swift */,
 				8841E83422EAF2E800E7F1DC /* LineUIView.swift */,
@@ -121,7 +122,6 @@
 				8841E83022EAF11000E7F1DC /* Controller */,
 				88FC4A7422EECB63008F7B84 /* Helper Files */,
 				8861134C22E9CCD70004BA39 /* Assets.xcassets */,
-				8861134E22E9CCD70004BA39 /* LaunchScreen.storyboard */,
 				8861135122E9CCD70004BA39 /* Info.plist */,
 			);
 			path = G;
